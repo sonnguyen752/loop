@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // let number = 11;
+    // let resuft;
+    // for (let i = 2; i<= number - 1; i++) {
+    //     if (number %i != 0) {
+    //         resuft = ("so do la so nguyen to")
+    //     } else {
+    //         resuft = ("so do la so nguyen to")
+    //     }
+    // }
+    // document.write (resuft);
+   
+    // let number = +prompt("Nhập số để kiểm tra số nguyên tố: ")
+    // let i = 2
+    // while (i < number ) {
+    //     if (number % i == 0) {
+    //         document.write("Số này không phải là số nguyên tố")
+    //         break
+    //     } else if (i == number - 1) {
+    //         document.write("Số này là số nguyên tố")
+    //         i++
+    //     } else {
+    //         i++
+    //     }
+//     // }
+//     let n=prompt("nhập số nguyên tố")
+//   var flag = true;
+ 
+//  // Nếu n bé hơn 2 tức là không phải số nguyên tố
+//  if (n < 2){
+//      flag = false;
+//  }
+//  else if (n == 2){
+//      flag = true;
+//  }
+//  else if (n % 2 == 0){
+//    flag = false;
+//  }
+//  else{
+//      // lặp từ 3 tới n-1 với bước nhảy là 2 (i+=2)
+//      for (var i = 3; i < n-1; i+=2)
+//      {
+//          if (n % i == 0){
+//              flag = false;
+//              break;
+//          }
+//      }
+//  }
+
+//  // Kiểm tra biến flag
+//  if (flag == true){
+//      document.write(n + " là số nguyên tố <br/>");
+//  }
+//  else{
+//      document.write(n + " không phải là số nguyên tố <br/>");
+//  }
+let number = prompt ("nhap so");
+if (number < 2) {
+    document.write (" kh nguyen to");
+} else if (number == 2) {
+    document.write ("là so nt")
+} else {
+    let count = 0;
+    for (let i = 1; i<= number; i++) {
+        if (number % i ==0) {
+            count++;
+        }
+    }
+    if (count == 2) {
+        document.write("la so nto")
+    }else {
+        document.write("kh la so nt")
+    }
+}
+
+</script>
