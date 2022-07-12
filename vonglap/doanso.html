@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="play()"> Choi</button>
+</body>
+</html>
+<script>
+    // debugger;
+    function play() {
+        let max = +prompt("moi nhap so lon nhat");
+        let min = 0;
+        let radom = (Math.floor(Math.random() * max) + min);
+        let num = +prompt("nhap so cua ban");
+        // if (num == radom) {
+        //     alert("chuc mung ban doan dung");
+        //     }
+        let i = 2;
+        while (num !== radom) {
+           alert("so ban chon k dung! ban con "+ i + "luot");
+           if (i == 0){
+               alert("ban het quyen chon");
+               break;
+           }
+           num = + prompt("nhap lai so cua ban");
+           i--;
+            }
+            if (num == radom) {
+                alert("chuc mung ban doan dung")
+            }
+        }
+
+
+</script>
