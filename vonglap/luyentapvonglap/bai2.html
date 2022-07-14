@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tang giam nhiet do</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // debugger;
+    let nhietdo = +prompt("nhap nhiet do hien tai");
+    while (nhietdo < 20 || nhietdo > 100) {
+        if (nhietdo < 20){
+            alert("ban hay tang nhiet do");
+        }
+        if (nhietdo > 100) {
+            alert("ban hay giam nhiet do");
+        }
+        nhietdo = +prompt("nhap lai nhiet do"); 
+    }
+    if (nhietdo >= 20  && nhietdo <= 100)  {
+            alert("nhiet do phu hop");
+        }
+
+</script>
