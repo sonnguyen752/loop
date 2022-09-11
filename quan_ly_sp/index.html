@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dong ho </title>
+</head>
+<body>
+    <div id="dongHo">
+    <h2>Thoi gian bay gio la</h2>
+    <div id="time">
+    <div><span id="hour">00</span><span> gio</span></div>
+    <div><span id="minutes">00</span><span> phut</span></div>
+    <div><span id="second">00</span><span> giay</span></div>
+    </div>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #ffa17f;
+           background: -webkit-linear-gradient(to righht, #00223E, #FFA17F);
+            background: linear-gradient(to righht, #00223E, #FFA17F); 
+        } 
+        h2 {
+            position: relative;
+            display: block;
+            color: aliceblue;
+            text-align: center;
+            margin: 10px 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4 cm;
+        }
+        #dongHo #time {
+            display: flex;
+        }
+        #dongHo #time div {
+            position: relative;
+            margin: 0 5px;
+        }
+        #dongHo #time div span {
+            position: relative;
+            display: block;
+            width: 100px;
+            height: 50px;
+            background: #2196f3;
+            color: white;
+            font-weight: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            z-index: 3;
+            box-shadow: 0 0 0 1px rgba(250, 249, 249, 0.2);
+        }
+    </style>
+    <p>Giờ báo thức: </p>
+    gio: <input id="gioBaoThuc" type="number" style="font-size: 2rem; width: 100px;">
+    phut: <input id="phutBaoThuc" type="number"style="font-size: 2rem; width: 100px;">
+    giay: <input id="giayBaoThuc" type="number"style="font-size: 2rem; width: 100px;">
+    <audio id="nhac" src="nhac.mp3" play></audio>
+    </body>
+</html>
+<script>
+    
+    function time() {
+    var date = new Date();
+    var hour = date.getHours();
+    document.getElementById("hour").innerHTML = hour;
+    var minute= date.getMinutes();
+    document.getElementById("minutes").innerHTML = minute;
+    var second = date.getSeconds();
+    document.getElementById("second").innerHTML = second;
+    }
+    var countTime = setInterval(time, 1000);
+    if (  document.getElementById("gioBaoThuc").value== new Date().getHours()&& document.getElementById("phutBaoThuc").value==new Date().getMinutes()  
+    &&  document.getElementById("giayBaoThuc").value==new Date().getSeconds() ) {
+         document.getElementById("nhac");
+    }
+    else {
+       console.log(" ")
+    }
+    
+    
+</script>
