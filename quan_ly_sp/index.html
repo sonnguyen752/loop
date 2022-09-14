@@ -68,7 +68,7 @@
     gio: <input id="gioBaoThuc" type="number" style="font-size: 2rem; width: 100px;">
     phut: <input id="phutBaoThuc" type="number"style="font-size: 2rem; width: 100px;">
     giay: <input id="giayBaoThuc" type="number"style="font-size: 2rem; width: 100px;">
-    <audio id="nhac" src="nhac.mp3" play></audio>
+    <!-- <audio id="nhac" src="nhac.mp3" play></audio> -->
     </body>
 </html>
 <script>
@@ -81,15 +81,19 @@
     document.getElementById("minutes").innerHTML = minute;
     var second = date.getSeconds();
     document.getElementById("second").innerHTML = second;
-    }
-    var countTime = setInterval(time, 1000);
     if (  document.getElementById("gioBaoThuc").value== new Date().getHours()&& document.getElementById("phutBaoThuc").value==new Date().getMinutes()  
     &&  document.getElementById("giayBaoThuc").value==new Date().getSeconds() ) {
-         document.getElementById("nhac");
+        var audio = new Audio("nhac.mp3");
+        audio.play();
     }
     else {
        console.log(" ")
     }
+    }
+    var countTime = setInterval(time, 1000);
+    // function baoThuc() {
     
+    // }
+    // setInterval(baoThuc,1000);
     
 </script>
